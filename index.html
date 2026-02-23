@@ -340,7 +340,20 @@ async function runAnalysis() {
   const industry = document.getElementById('industry-in').value;
   const revenue = document.getElementById('revenue-level').value;
 
-  if (!name || !email || !whatsapp || !company || !objective || !input || !goal || !bizType || !industry || !revenue) {
+  let hasError = false;
+  
+  if (!name) { markError(document.getElementById('name-in')); hasError = true; }
+  if (!email) { markError(document.getElementById('email-in')); hasError = true; }
+  if (!whatsapp) { markError(document.getElementById('whatsapp-in')); hasError = true; }
+  if (!company) { markError(document.getElementById('company-in')); hasError = true; }
+  if (!objective) { markError(document.getElementById('objective')); hasError = true; }
+  if (!input) { markError(document.getElementById('main-in')); hasError = true; }
+  if (!goal) { markError(document.getElementById('goal-in')); hasError = true; }
+  if (!bizType) { markError(document.getElementById('biz-type')); hasError = true; }
+  if (!industry) { markError(document.getElementById('industry-in')); hasError = true; }
+  if (!revenue) { markError(document.getElementById('revenue-level')); hasError = true; }
+  
+  if (hasError) {
     screen.innerHTML = `<p style="color:red">Completa todos los campos.</p>`;
     return;
   }
