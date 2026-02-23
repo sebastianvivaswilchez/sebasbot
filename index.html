@@ -125,12 +125,6 @@ h1 { margin-top:16px; }
   background: rgba(0, 212, 255, 0.1); color: var(--accent); font-size: 0.7rem; font-weight: 700; margin-bottom: 10px;
 }
 
-@media (max-width: 1000px) {
-  .dashboard-card { grid-template-columns: 1fr; }
-  .sales-panel { border-right: none; border-bottom: 1px solid var(--glass-border); padding: 0 0 40px 0; }
-  h1 { font-size: 2.5rem; }
-}
-
 select {
   color: #fff;
   background-color: rgba(255,255,255,0.05);
@@ -181,6 +175,55 @@ select option {
 .input-error {
   border: 1px solid #ff3b3b !important;
   box-shadow: 0 0 0 2px rgba(255, 59, 59, 0.25);
+}
+  @media (max-width: 768px) {
+
+  header {
+    padding: 50px 20px 30px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    line-height: 1.4;
+  }
+
+  section {
+    padding: 0 20px;
+  }
+
+  .benefit-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit-item p {
+    font-size: 0.85rem;
+  }
+
+  .dashboard-card {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .sales-panel {
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+
+  .output-screen {
+    max-height: none;
+  }
+  .cta-btn {
+  padding: 16px;
+  font-size: 0.9rem;
+  }
+
 }
 
 </style>
